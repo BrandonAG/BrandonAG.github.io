@@ -1,3 +1,10 @@
+:root {
+    --main-text-color: #465671;
+    --main-background-color: #eeeef9;
+    --header-background-color: #31343e;
+    --header-font-color: #9fc6cd;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,15 +12,14 @@
 }
 
 body {
-    color: #465671;
-    /* font options in case fonts are not installed*/
+    color: var(--main-text-color);
     font-family: Helvetica, Arial, sans-serif;
-    background-color: #eeeef9;
+    background-color: var(--main-background-color);
 }
 
 header {
     padding: 15px 0px;
-    background-color: #31343e;
+    background-color: var(--header-background-color);
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -22,16 +28,15 @@ header {
 header h1 {
     padding-left: 5vw;
     padding-right: 1vw;;
-    background-color: #9fc6cd;
+    background-color: var(--header-font-color);
     font-weight: bold;
     font-size: 42px;
-    color: #31343e;
+    color: var(--header-background-color);
     margin: 0;
 }
 
 header a {
     text-decoration: none;
-    
 }
 
 header nav {
@@ -49,16 +54,16 @@ header nav ul {
 header nav ul li a {
     padding-left: 0.5vw;
     padding-right: 0.5vw;
-    color: #9fc6cd;
+    color: var(--header-font-color);
     margin: 0.3vw 0.5vw;
     font-weight: lighter;
     font-size: 1.55vw;
-    border-bottom: 0.3vw solid #9fc6cd;
+    border-bottom: 0.3vw solid var(--header-font-color);
 }
 
 header nav ul li a:hover {
-    background-color: #9fc6cd;
-    color: #31343e;
+    background-color: var(--header-font-color);
+    color: var(--header-background-color);
 }
 
 .hero {
@@ -73,30 +78,25 @@ header nav ul li a:hover {
 }
 
 .hero-message h3{
-    background-color: #9fc6cd;
+    background-color: var(--header-font-color);
     padding: 0.2vw 0.4vw;
     margin: 0.8vw 2vw;
     font-size: 1.55vw;
 }
 
-main {
-
-}
-
 .flex-row {
     margin: 30px auto;
-    /* padding-bottom: 50px; */
     width: 90%;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
 }
 
 .flex-row h2 {
     padding-right: 1.5vw;
     text-align: right;
-    flex: 1 15%;
+    flex: 2 15%;
     font-weight: bold;
     font-size: 42px;
     height: 100%;
@@ -109,11 +109,7 @@ main {
 
 .row-info {
     padding: 5px 1.5vw;
-    /* display: flex;
-    align-items: stretch;
-    align-content: stretch;
-    justify-content: center; */
-    border-left: 4px solid #465671;
+    border-left: 4px solid var(--main-text-color);
     margin: 0;
     min-height: 100px;
 }
@@ -122,28 +118,25 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    /* align-items: center; */
     list-style: none;
     width: 100%;
     height: 100%;
-    /* flex: 1; */
 }
 
 .row-info ul li a {
-    color: #465671;
+    color: var(--main-text-color);
     padding: 4px;
     margin: 15px;
     font-size: 20px;
     font-weight: bolder;
-    border-bottom: 3px solid #465671;
+    border-bottom: 3px solid var(--main-text-color);
     text-decoration: none;
     height: 100%;
-    /* flex: 1; */
 }
 
 .row-info ul li a:hover {
-    background-color: #465671;
-    color: #eeeef9;
+    background-color: var(--main-text-color);
+    color: var(--main-background-color);
 }
 
 .project-grid {
@@ -157,7 +150,7 @@ main {
 .project {
     display: flex;
     flex-wrap: wrap;
-    border: 4px solid #9fc6cd;
+    border: 4px solid var(--header-font-color);
     filter: grayscale(40%);
     background-repeat: no-repeat;
     background-size: cover;
@@ -169,7 +162,7 @@ main {
 }
 
 .project-info {
-    background-color: #9fc6cd;
+    background-color: var(--header-font-color);
     padding: 0.3vw;
     margin-bottom: 1vw;
 }
@@ -202,4 +195,31 @@ main {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+}
+
+@media screen and (max-width: 575px) {    
+    header h1 {
+        flex: 2 80%;
+    }
+
+    header nav ul li a {
+        font-size: 3vw;
+        border-bottom: none;
+    }
+
+    .flex-row h2 {
+        text-align: left;
+    }
+
+    .row-info {
+        border-left: none;
+    }
+
+    .row-info ul li a {
+        border-bottom: none;
+    }
+
+    #contact-me .row-info{
+        display: inline;
+    }
 }

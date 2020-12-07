@@ -1,7 +1,7 @@
 # BrandonAG.github.io
 
 ## Purpose
-Show off my lates projects
+Show off my latest projects
 
 ## Built With
 * HTML

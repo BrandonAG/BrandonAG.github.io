@@ -187,7 +187,7 @@ header nav ul li a:hover {
 }
 
 .box1 {
-    background-image: url("./images/run-buddy.png");
+    background-image: url("./images/mailflyer.png");
     grid-column-start: 1; 
     grid-column-end: 3; 
     grid-row-start: 1; 
@@ -195,15 +195,15 @@ header nav ul li a:hover {
 }
 
 .box2 {
-    background-image: url("./images/horiseon.png");
+    background-image: url("./images/run-buddy.png");
 }
 
 .box3 {
-    background-image: url("./images/safe-passage.PNG");
+    background-image: url("./images/horiseon.png");
 }
 
 .box4 {
-    background-image: url("./images/computer_desk.jpg");
+    background-image: url("./images/safe-passage.PNG");
 }
 
 .box5 {
